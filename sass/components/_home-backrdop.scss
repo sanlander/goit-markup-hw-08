@@ -18,16 +18,21 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 528px;
-    min-height: 581px;
+    width: 95vw;
+    // min-height: 581px;
     overflow: auto;
-
     padding: 40px;
     background-color: var(--primary-background-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    @include mobile {
+        width: 450px;
+    }
+    @include desktop {
+        width: 528px;
+    }
 }
 
 .button-backrdop-close {
@@ -51,10 +56,13 @@
 .modal-title {
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
     letter-spacing: 0.03em;
     margin-bottom: 12px;
+@include desktop {
+        line-height: 1.15;
+    }
 }
 
 .form-field {
@@ -67,7 +75,6 @@
 }
 
 .form-label {
-    font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
@@ -148,17 +155,19 @@
 }
 
 .checkbox-label {
-    font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     display: flex;
     align-items: center;
-    line-height: 1.71;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--second-text-color);
     a {
             color: var(--accent-background-color);
         }
-        
+    @include desktop {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 .check-icon {

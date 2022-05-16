@@ -1,18 +1,19 @@
 .feature {
-    // display: flex;
-    // justify-content: space-between;
-    @media screen and (min-width:768px) {
+    @include tablet {
             display: flex;
             flex-wrap: wrap;
+    }
+    @include desktop {
+        flex-wrap: nowrap;
     }
 }
 
 .feature__item {
-    width: 100%;
+    // width: 100%;
     &:not(:last-child) {
         margin-bottom: 30px;
     }
-    @media screen and (min-width:768px) {
+    @include tablet {
         width: calc(100% / 2 - 15px);
         &:nth-child(2n + 1) {
         margin-right: 30px;
@@ -21,6 +22,15 @@
         margin-bottom: 0;
         }
         
+    }
+    @include desktop {
+        width: calc(100% / 4 - 15px);
+        &:not(:last-child) {
+                margin-right: 30px;
+            }
+        &:nth-child(-n + 2) {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -43,7 +53,7 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 10px;
-    @media screen and (min-width:768px) {
+    @include tablet {
     text-align: left;
     font-weight: 700;
     }

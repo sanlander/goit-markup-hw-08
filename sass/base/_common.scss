@@ -13,12 +13,14 @@ body {
     // width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-    @media screen and (min-width:480px) {
+    @include mobile {
         width: 480px;
     }
-
-    @media screen and (min-width:768px) {
+    @include tablet {
         width: 768px;
+    }
+    @include desktop {
+        width: 1200px;
     }
 }
 
