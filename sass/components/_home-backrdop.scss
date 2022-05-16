@@ -1,0 +1,199 @@
+.backrdop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backrdop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    min-height: 581px;
+    overflow: auto;
+
+    padding: 40px;
+    background-color: var(--primary-background-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.button-backrdop-close {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 8px 8px 0 0;
+    padding: 0;
+    cursor: pointer;
+    background: var(--primary-background-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+}
+
+.form-field {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    &:last-child {
+            margin-bottom: 20px;
+        }
+}
+
+.form-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--second-text-color);
+    margin-bottom: 4px;
+}
+
+.form-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: border var(--transition-primary);
+    padding: 11px 42px;
+    &:hover,
+    &:focus {
+            border: 1px solid var(--accent-background-color);
+            outline: none;
+        }
+}
+
+.form-text {
+    resize: none;
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: border var(--transition-primary);
+    &::placeholder {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 1.17;
+            letter-spacing: 0.01em;
+            color: rgba(117, 117, 117, 0.5);
+        }
+    &:hover,
+    &:focus {
+        border: 1px solid var(--accent-background-color);
+        outline: none;
+    }
+}
+
+.input-box {
+    position: relative;
+}
+
+.modal-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: fill var(--transition-primary);
+    .form-input:hover + &,
+    .form-input:focus + & {
+            fill: var(--accent-background-color);
+        }
+}
+
+// ============ Checkbox modal ============
+.checkbox-field {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.modal-check {
+    width: 16px;
+    height: 15px;
+    border: 1px solid var(--primary-text-color);
+    border-radius: 3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 7px;
+}
+
+.checkbox-label {
+    font-weight: 400;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--second-text-color);
+    a {
+            color: var(--accent-background-color);
+        }
+        
+}
+
+.check-icon {
+    fill: transparent;
+    .checkbox-input:checked+.checkbox-label & {
+            fill: var(--primary-background-color);
+        }
+}
+
+.checkbox-input:checked+.checkbox-label span {
+    background-color: var(--accent-background-color);
+    border: 1px solid transparent;
+}
+
+.button-field {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-button {
+    width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    background: var(--accent-background-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: var(--primary-background-color);
+    border: none;
+    transition: background-color var(--transition-primary);
+    cursor: pointer;
+    &:hover,
+    &:focus {
+            background-color: #188CE8;
+        }
+}

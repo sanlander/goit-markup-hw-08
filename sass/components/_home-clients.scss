@@ -1,0 +1,28 @@
+.clients {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clients-item {
+    a {
+            display: inline-flex;
+            width: 170px;
+            height: 92px;
+            border: 1px solid #AFB1B8;
+            box-sizing: border-box;
+            border-radius: 4px;
+            justify-content: center;
+            align-items: center;
+            fill: #afb1b8;
+            transition: border-color var(--transition-primary),
+                fill var(--transition-primary);
+        }
+        & a:hover,
+        & a:focus {
+                    fill: var(--accent-text-color);
+                    border-color: var(--accent-text-color);
+                }
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+}

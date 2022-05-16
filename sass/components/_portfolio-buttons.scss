@@ -1,0 +1,36 @@
+.btm-works {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    & .item:not(:last-child) {
+            margin-right: 8px;
+        }
+}
+
+.button-filter {
+    color: var(--primary-text-color);
+    background-color: var(--button-primary-background);
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    padding: 6px 22px;
+    border-radius: 4px;
+    display: inline-block;
+    height: 38px;
+    border: 1px solid transparent;
+    transition: color var(--transition-primary), background-color var(--transition-primary), box-shadow var(--transition-primary);
+    &:hover,
+    &:focus {
+            color: #FFFFFF;
+            background-color: var(--accent-background-color);
+            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+    
+            box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
+    
+            box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+        }
+}
