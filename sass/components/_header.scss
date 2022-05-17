@@ -1,16 +1,20 @@
 .header {
     border-bottom: 1px solid #ECECEC;
+    align-items: center;
+    display: flex;
+    height: 60px;
 }
 
 .cont-header {
     display: flex;
     align-items: center;
+    
 }
 
 // ============ Menu nav + Contacts ============
 .menu-nav,
 .contacts {
-    display: flex;
+    display: none;
 }
 .contacts {
     margin-left: auto;
@@ -91,4 +95,14 @@
     &:focus {
             color: var(--accent-text-color);
         }
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    margin-left: auto;
+
+}
+.menu-btn__open-icon {
+
 }
