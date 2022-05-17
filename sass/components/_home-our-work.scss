@@ -1,5 +1,11 @@
 .working {
+    display: none;
+    @include desktop {
+    display: block;
     padding-top: 0;
+    }
+
+    
 }
 
 .working__img {
