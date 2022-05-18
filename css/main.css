@@ -262,7 +262,6 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
-  outline: 1px solid tomato;
 }
 .menu-close-btn:hover {
   fill: var(--accent-text-color);
@@ -286,6 +285,9 @@ p {
   font-size: 40px;
   line-height: 1.18;
   letter-spacing: 0.02em;
+}
+.mob-menu-nav__link:hover, .mob-menu-nav__link:focus {
+  color: var(--accent-text-color);
 }
 
 .mob-contacts__tel {
@@ -322,9 +324,6 @@ p {
       flex-wrap: wrap;
 }
 
-.mob-soc__item {
-  position: relative;
-}
 .mob-soc__item:not(:last-child) {
   padding-right: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
@@ -338,6 +337,14 @@ p {
   line-height: 1.23;
   letter-spacing: 0.02em;
   color: var(--accent-text-color);
+}
+
+.mob-menu-nav__link--current {
+  color: var(--accent-text-color);
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .logo {
@@ -1125,6 +1132,12 @@ p {
 .backrdop.is-hidden {
   opacity: 0;
   pointer-events: none;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 .modal {
