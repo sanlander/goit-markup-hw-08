@@ -328,7 +328,7 @@ p {
 .mob-soc__item:not(:last-child) {
   margin-right: 20px;
 }
-.mob-soc__item::after {
+.mob-soc__item:not(:last-child)::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -336,9 +336,8 @@ p {
           transform: translateY(-50%);
   right: -10px;
   width: 1px;
-  height: 40px;
-  background-color: red;
-  border: none;
+  height: 22px;
+  background-color: rgba(33, 33, 33, 0.2);
 }
 
 .mob-soc__link {

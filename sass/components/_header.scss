@@ -192,16 +192,15 @@
     &:not(:last-child) {
         margin-right: 20px;
     }
-    &::after {
+    &:not(:last-child)::after {
             content: '';
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             right: -10px;
             width: 1px;
-            height: 40px;
-            background-color: red;
-            border: none;
+            height: 22px;
+            background-color: rgba(33, 33, 33, 0.2);
         }
 }
 
