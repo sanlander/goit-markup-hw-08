@@ -110,9 +110,9 @@
             color: var(--accent-text-color);
         }
     font-size: 12px;
-    //for desctop
-    //font-size: 14px;
-    
+    @include desktop {
+    font-size: 14px;
+    }
 }
 
 .contacts__icon-tel, .contacts__icon-mail {
@@ -127,16 +127,19 @@
 .contacts__icon-tel {
     width: 14px;
     height: 10px;
-    //for desctop
-    // width: 16px;
-    // height: 12px;
+    
+    @include desktop {
+    width: 16px;
+    height: 12px;
+    }
 }
 .contacts__icon-mail {
     width: 10px;
     height: 14px;
-    //for desctop
-    // width: 16px;
-    // height: 16px;
+    @include desktop {
+    width: 10px;
+    height: 16px;
+    }
 }
 
 // ============ Мобильное меню ============

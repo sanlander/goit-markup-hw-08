@@ -4,13 +4,14 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 1.17;
-    //for desctop
-    // font-size: 26px;
-    // line-height: 1.19;
     letter-spacing: 0.03em;
     &--white {
             color: var(--primary-background-color);
         }
+    @include desktop {
+        font-size: 26px;
+        line-height: 1.19;
+    }
 }
 
 .header__logo {
