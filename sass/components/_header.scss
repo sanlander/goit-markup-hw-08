@@ -183,19 +183,25 @@
 }
 
 .mob-soc {
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
     
 }
 .mob-soc__item {
-     &:not(:last-child)::after {
-        margin: 0 10px;
-        content: '';
-        display: inline-flexbox;
-        align-items: center;
-        width: 0px;
-        height: 22px;
-        border: 1px solid rgba(33, 33, 33, 0.2);
+    position: relative;
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+    &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -10px;
+            width: 1px;
+            height: 40px;
+            background-color: red;
+            border: none;
         }
 }
 
@@ -206,4 +212,5 @@
     line-height: 1.23;
     letter-spacing: 0.02em;
     color: var(--accent-text-color);
+    
 }
