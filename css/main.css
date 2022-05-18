@@ -119,6 +119,11 @@ p {
   display: flex;
   height: 60px;
 }
+@media screen and (min-width: 768px) {
+  .header {
+    height: 80px;
+  }
+}
 
 .cont-header {
   display: -webkit-box;
@@ -132,6 +137,14 @@ p {
 .menu-nav,
 .contacts {
   display: none;
+}
+@media screen and (min-width: 768px) {
+  .menu-nav,
+.contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .contacts {
@@ -224,7 +237,6 @@ p {
   width: 100vw;
   height: 100vh;
   z-index: 10;
-  padding: 48px 40px;
 }
 .mob-menu .container {
   padding: 0;
@@ -240,10 +252,11 @@ p {
       -ms-flex-pack: justify;
           justify-content: space-between;
   overflow: auto;
+  position: relative;
 }
 
 .menu-close-btn {
-  position: fixed;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -272,6 +285,20 @@ p {
   border: none;
   margin-left: auto;
   padding: 0;
+  cursor: pointer;
+}
+.menu-open-btn:hover {
+  fill: var(--accent-text-color);
+}
+@media screen and (min-width: 768px) {
+  .menu-open-btn {
+    display: none;
+  }
+}
+
+.mob-menu-nav {
+  display: inline-block;
+  margin: 48px 0 0 40px;
 }
 
 .mob-menu-nav__item:not(:last-child) {
@@ -313,10 +340,12 @@ p {
 }
 
 .mob-contacts {
-  margin-bottom: 64px;
+  display: inline-block;
+  margin: 5px 0 64px 40px;
 }
 
 .mob-soc {
+  margin: 0 0 48px 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
