@@ -26,6 +26,7 @@ body {
 }
 
 .container {
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -216,10 +217,130 @@ p {
   color: var(--accent-text-color);
 }
 
-.menu-btn {
+.mob-menu {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  padding: 48px 40px;
+}
+.mob-menu .container {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: auto;
+}
+
+.menu-close-btn {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  outline: 1px solid tomato;
+}
+.menu-close-btn:hover {
+  fill: var(--accent-text-color);
+}
+
+.menu-open-btn {
   background: none;
   border: none;
   margin-left: auto;
+  padding: 0;
+}
+
+.mob-menu-nav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu-nav__link {
+  text-decoration: none;
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+}
+
+.mob-contacts__tel {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--accent-text-color);
+}
+
+.mob-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-contacts__mail {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--second-text-color);
+}
+
+.mob-contacts {
+  margin-bottom: 64px;
+}
+
+.mob-soc {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.mob-soc__item:not(:last-child)::after {
+  margin: 0 10px;
+  content: "";
+  display: inline-flexbox;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 0px;
+  height: 22px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mob-soc__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.23;
+  letter-spacing: 0.02em;
+  color: var(--accent-text-color);
 }
 
 .logo {

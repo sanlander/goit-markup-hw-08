@@ -25,7 +25,7 @@
         <a class="logo header__logo" href=""
           ><span class="logo__color">Web</span>Studio</a
         >
-<!-- Меню -->
+        <!-- Меню -->
         <nav>
           <ul class="menu-nav list">
             <li class="menu-nav__item">
@@ -41,7 +41,7 @@
             </li>
           </ul>
         </nav>
-<!-- Контакты -->
+        <!-- Контакты -->
         <ul class="contacts list">
           <li class="contacts__item">
             <a href="mailto:info@devstudio.com" class="contacts__link">
@@ -59,11 +59,76 @@
           </li>
         </ul>
         <!-- Мобильное меню -->
-        <button type="button" class="menu-btn">
-<svg class="menu-btn__open-icon" width="40" height="40" >
-  <use href="./images/icons.svg#icon-menu_40px" ></use>
-</svg>
+        <!-- Кнопка открыть меню -->
+        <button type="button" class="menu-open-btn">
+          <svg class="menu-open-btn__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu_40px"></use>
+          </svg>
         </button>
+      </div>
+
+      <!-- Моб навигация -->
+      <div class="mob-menu">
+        <div class="container">
+          <!-- Кнопка закрыть меню -->
+          <button type="button" class="menu-close-btn">
+            <svg class="menu-close-btn__icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-close_40px"></use>
+            </svg>
+          </button>
+
+          <div class="mob-menu-top">
+            <ul class="mob-menu-nav list">
+              <li class="mob-menu-nav__item">
+                <a
+                  href=""
+                  class="mob-menu-nav__link mob-menu-nav__link--current"
+                  >Студия</a
+                >
+              </li>
+              <li class="mob-menu-nav__item">
+                <a href="./portfolio.html" class="mob-menu-nav__link"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mob-menu-nav__item">
+                <a href="" class="mob-menu-nav__link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Моб контакты -->
+          <div class="mob-menu-bottom">
+            <ul class="mob-contacts list">
+              <li class="mob-contacts__item">
+                <a href="tel:+380961111111" class="mob-contacts__tel">
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="mob-contacts__item">
+                <a href="mailto:info@devstudio.com" class="mob-contacts__mail">
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <!-- Моб соц. сети -->
+
+            <ul class="mob-soc list">
+              <li class="mob-soc__item">
+                <a class="mob-soc__link" href="">Instagram</a>
+              </li>
+              <li class="mob-soc__item">
+                <a class="mob-soc__link" href="">Twitter</a>
+              </li>
+              <li class="mob-soc__item">
+                <a class="mob-soc__link" href="">Facebook</a>
+              </li>
+              <li class="mob-soc__item">
+                <a class="mob-soc__link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <!------------- Main ------------->
@@ -440,9 +505,9 @@
             </address>
           </div> -->
 
-          <!------------- Footer / Соц сети ------------->
+    <!------------- Footer / Соц сети ------------->
 
-          <!-- <div class="footer-soc">
+    <!-- <div class="footer-soc">
             <h3 class="footer-soc-title">присоединяйтесь</h3>
             <ul class="soc list">
               <li class="soc-link">
@@ -476,8 +541,8 @@
             </ul>
           </div> -->
 
-          <!------------- Footer / Подписка E-mail ------------->
-          <!-- <div class="mailing">
+    <!------------- Footer / Подписка E-mail ------------->
+    <!-- <div class="mailing">
             <h3 class="mailing-title">Подпишитесь на рассылку</h3>
             <form>
               <input type="email" name="email" placeholder="E-mail" />
