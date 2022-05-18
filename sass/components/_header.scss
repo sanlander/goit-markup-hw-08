@@ -22,15 +22,17 @@
     }
 }
 .contacts {
+    @include tablet {
     display: inline-block;
     flex-wrap: wrap;
     // для десктоп (было)
     margin-left: auto;
+    }
 }
 
 .menu-nav__link,
 .contacts__link {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -113,7 +115,7 @@
     
 }
 
-.contacts__icon {
+.contacts__icon-tel, .contacts__icon-mail {
     margin: auto 10px auto 0;
     fill: currentColor;
     transition: color var(--transition-primary) ease-in-out;
@@ -121,6 +123,20 @@
     &:focus {
             color: var(--accent-text-color);
         }
+}
+.contacts__icon-tel {
+    width: 14px;
+    height: 10px;
+    //for desctop
+    // width: 16px;
+    // height: 12px;
+}
+.contacts__icon-mail {
+    width: 10px;
+    height: 14px;
+    //for desctop
+    // width: 16px;
+    // height: 16px;
 }
 
 // ============ Мобильное меню ============
