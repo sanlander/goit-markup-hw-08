@@ -159,6 +159,9 @@ p {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   text-decoration: none;
@@ -206,6 +209,9 @@ p {
       -ms-flex-align: center;
           align-items: center;
 }
+.contacts__item:not(:last-child) {
+  margin-bottom: 10px;
+}
 
 .menu-nav__link--current {
   color: var(--accent-text-color);
@@ -224,6 +230,7 @@ p {
 .contacts__link {
   padding: 0;
   color: var(--second-text-color);
+  font-size: 12px;
 }
 .contacts__link:hover, .contacts__link:focus {
   color: var(--accent-text-color);
@@ -389,8 +396,8 @@ p {
   text-decoration: none;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
 }
 .logo--white {

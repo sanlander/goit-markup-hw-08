@@ -31,6 +31,7 @@
 .menu-nav__link,
 .contacts__link {
     display: inline-flex;
+    align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
     text-decoration: none;
@@ -75,7 +76,9 @@
 .contacts__item {
     position: relative;
     align-items: center;
-    
+    &:not(:last-child) {
+            margin-bottom: 10px;
+        }
     // for desctop
     // &:not(:last-child) {
     //         margin-right: 50px;
@@ -104,6 +107,9 @@
     &:focus {
             color: var(--accent-text-color);
         }
+    font-size: 12px;
+    //for desctop
+    //font-size: 14px;
     
 }
 
