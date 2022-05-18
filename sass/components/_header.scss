@@ -25,8 +25,11 @@
     @include tablet {
     display: inline-block;
     flex-wrap: wrap;
-    // для десктоп (было)
     margin-left: auto;
+    }
+    @include desktop {
+        display: flex;
+        flex-wrap: nowrap;
     }
 }
 
@@ -80,11 +83,12 @@
     align-items: center;
     &:not(:last-child) {
             margin-bottom: 10px;
+        @include desktop {
+                margin-bottom: 0;
+                margin-right: 30px;
+            }
         }
-    // for desctop
-    // &:not(:last-child) {
-    //         margin-right: 50px;
-    //     }
+    
 }
 
 .menu-nav__link--current {
@@ -103,7 +107,6 @@
 
 .contacts__link {
     padding: 0;
-    // для десктоп (было)
     color: var(--second-text-color);
     &:hover,
     &:focus {
