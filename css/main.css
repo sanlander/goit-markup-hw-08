@@ -1171,7 +1171,7 @@ p {
 }
 @media screen and (min-width: 1200px) {
   .mailing {
-    width: 100%;
+    width: auto;
   }
 }
 
@@ -1342,6 +1342,9 @@ p {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 50%;
+}
+.button-backrdop-close:hover {
+  fill: var(--accent-background-color);
 }
 
 .modal-title {
