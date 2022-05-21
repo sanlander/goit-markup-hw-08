@@ -29,12 +29,12 @@
         <nav>
           <ul class="menu-nav list">
             <li class="menu-nav__item">
-              <a href="./index.html" class="menu-nav__link"
-                >Студия</a
-              >
+              <a href="./index.html" class="menu-nav__link">Студия</a>
             </li>
             <li class="menu-nav__item">
-              <a href="" class="menu-nav__link menu-nav__link--current">Портфолио</a>
+              <a href="" class="menu-nav__link menu-nav__link--current"
+                >Портфолио</a
+              >
             </li>
             <li class="menu-nav__item">
               <a href="" class="menu-nav__link">Контакты</a>
@@ -45,7 +45,7 @@
         <ul class="contacts list">
           <li class="contacts__item">
             <a href="mailto:info@devstudio.com" class="contacts__link">
-              <svg class="contacts__icon-tel" >
+              <svg class="contacts__icon-tel">
                 <use href="./images/icons.svg#icon-envelope"></use></svg
               >info@devstudio.com</a
             >
@@ -81,14 +81,12 @@
           <div class="mob-menu-top">
             <ul class="mob-menu-nav list">
               <li class="mob-menu-nav__item">
-                <a
-                  href="./index.html"
-                  class="mob-menu-nav__link "
-                  >Студия</a
-                >
+                <a href="./index.html" class="mob-menu-nav__link">Студия</a>
               </li>
               <li class="mob-menu-nav__item">
-                <a href="" class="mob-menu-nav__link mob-menu-nav__link--current"
+                <a
+                  href=""
+                  class="mob-menu-nav__link mob-menu-nav__link--current"
                   >Портфолио</a
                 >
               </li>
@@ -127,7 +125,6 @@
               <li class="mob-soc__item">
                 <a class="mob-soc__link" href="">LinkedIn</a>
               </li>
-              
             </ul>
           </div>
         </div>
@@ -165,12 +162,36 @@
             <li class="item">
               <a class="work-examples" href="">
                 <div class="examples-bgr">
-                  <img
-                    class="img"
-                    src="./images/1.jpg"
-                    alt="Технокряк"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/1-desk.jpg    1x,
+                        ./images/portfolio/1-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/1-tab.jpg    1x,
+                        ./images/portfolio/1-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/1-mob.jpg    1x,
+                        ./images/portfolio/1-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img
+                      class="img"
+                      src="./images/portfolio/1-mob.jpg"
+                      alt="Технокряк"
+                    />
+                  </picture>
+
                   <div class="examples-animation">
                     <div class="bgr-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -189,12 +210,37 @@
             <li class="item">
               <a class="work-examples" href="">
                 <div class="examples-bgr">
-                  <img
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/2-desk.jpg    1x,
+                        ./images/portfolio/2-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/2-tab.jpg    1x,
+                        ./images/portfolio/2-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/2-mob.jpg    1x,
+                        ./images/portfolio/2-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img
                     class="img"
-                    src="./images/2.jpg"
+                    src="./images/portfolio/2-mob.jpg"
                     alt="Постер New Orlean vs Golden Star"
-                    width="370"
+                    
                   />
+                  </picture>
+                  
                   <div class="examples-animation">
                     <div class="bgr-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -420,9 +466,9 @@
             </address>
           </div>
 
-    <!------------- Footer / Соц сети ------------->
+          <!------------- Footer / Соц сети ------------->
 
-    <div class="footer-soc">
+          <div class="footer-soc">
             <h3 class="footer-soc-title">присоединяйтесь</h3>
             <ul class="soc list">
               <li class="soc-link">
@@ -456,8 +502,8 @@
             </ul>
           </div>
 
-    <!------------- Footer / Подписка E-mail ------------->
-    <div class="mailing">
+          <!------------- Footer / Подписка E-mail ------------->
+          <div class="mailing">
             <h3 class="mailing-title">Подпишитесь на рассылку</h3>
             <form>
               <input type="email" name="email" placeholder="E-mail" />
@@ -469,7 +515,6 @@
               </button>
             </form>
           </div>
-          
         </div>
       </div>
     </footer>
