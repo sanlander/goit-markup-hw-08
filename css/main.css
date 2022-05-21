@@ -1058,15 +1058,38 @@ p {
   max-height: 57%;
 }
 
-.footer-info {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
 .footer {
   background-color: var(--footer-background-color);
   padding: 60px 0;
+}
+
+.footer-info {
+  display: block;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer-info {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-info {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    text-align: left;
+  }
 }
 
 .address {
@@ -1095,11 +1118,17 @@ p {
 }
 
 .footer-logo-adress {
-  margin-right: 70px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-logo-adress {
+    margin-bottom: 0;
+    margin-right: 70px;
+  }
 }
 
 .footer-soc {
-  margin-right: 93px;
+  margin-bottom: 60px;
 }
 .footer-soc a {
   fill: white;
@@ -1111,6 +1140,12 @@ p {
 .footer-soc a:focus {
   background-color: var(--accent-text-color);
 }
+@media screen and (min-width: 1200px) {
+  .footer-soc {
+    margin-bottom: 0;
+    margin-right: 93px;
+  }
+}
 
 .footer-soc-title,
 .mailing-title {
@@ -1120,14 +1155,31 @@ p {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  margin: 12px 0 20px 0;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-soc-title,
+.mailing-title {
+    margin-top: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mailing {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mailing {
+    width: 100%;
+  }
 }
 
 .mailing input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   background-color: transparent;
-  margin-right: 12px;
+  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1178,6 +1230,13 @@ p {
           align-items: center;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (min-width: 1200px) {
+  .mailing input {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
 }
 
 .mailing-button {
